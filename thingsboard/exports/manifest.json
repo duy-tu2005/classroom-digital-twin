@@ -1,0 +1,12 @@
+{
+  "project": "Classroom Digital Twin",
+  "generatedAt": 1792258926383,
+  "containsSecrets": false,
+  "dashboardUrl": "http://3.104.115.21/dashboards/4d30d200-c6c8-11f1-b568-efad131da3da",
+  "entities": {
+    "device": "4c0b3dc0-c6c8-11f1-b568-efad131da3da",
+    "asset": "4bf6f270-c6c8-11f1-b568-efad131da3da",
+    "dashboard": "4d30d200-c6c8-11f1-b568-efad131da3da",
+    "ruleChain": "4b60a5e0-c6c8-11f1-b568-efad131da3da"
+  }
+}

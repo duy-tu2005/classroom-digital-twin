@@ -1,0 +1,25 @@
+{
+  "id": {
+    "entityType": "RULE_CHAIN",
+    "id": "4b60a5e0-c6c8-11f1-b568-efad131da3da"
+  },
+  "createdTime": 1791869898558,
+  "tenantId": {
+    "entityType": "TENANT",
+    "id": "4a5d3fa0-c6c8-11f1-b568-efad131da3da"
+  },
+  "name": "Classroom A302 - Digital Twin Processing",
+  "type": "CORE",
+  "firstRuleNodeId": {
+    "entityType": "RULE_NODE",
+    "id": "ed4d1690-ca51-11f1-b568-efad131da3da"
+  },
+  "root": false,
+  "debugMode": false,
+  "externalId": null,
+  "version": 22,
+  "configuration": null,
+  "additionalInfo": {
+    "description": "DHT22, two IR gates, bidirectional people counter, four lights and fan."
+  }
+}

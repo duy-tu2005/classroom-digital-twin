@@ -1,0 +1,16 @@
+{
+  "version": 4,
+  "orientation": "transverse",
+  "coverage": "full-scene",
+  "description": "Four adjoining transverse bands partition the whole approved image. Band 1 includes the entire board/front wall; their union illuminates every room surface.",
+  "projectionQuad": [[0.517, 0.235], [0.908, 0.376], [0.650, 1.085], [0.050, 0.743]],
+  "coverageMargin": 0.12,
+  "edgeSoftness": 0.018,
+  "boardProbes": [[0.625, 0.075], [0.840, 0.155], [0.845, 0.295], [0.620, 0.230], [0.745, 0.190]],
+  "lanes": [
+    {"id": 1, "label": "Dải 1 · gần bảng", "range": [0.00, 0.25], "marker": [0.634, 0.368]},
+    {"id": 2, "label": "Dải 2 · nửa trước", "range": [0.25, 0.50], "marker": [0.539, 0.516]},
+    {"id": 3, "label": "Dải 3 · nửa sau", "range": [0.50, 0.75], "marker": [0.444, 0.665]},
+    {"id": 4, "label": "Dải 4 · cuối lớp", "range": [0.75, 1.00], "marker": [0.349, 0.813]}
+  ]
+}

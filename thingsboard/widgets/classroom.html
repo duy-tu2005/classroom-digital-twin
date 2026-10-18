@@ -1,0 +1,51 @@
+<section class="cl-twin">
+  <header class="cl-header">
+    <div><div class="cl-eyebrow">CLASSROOM / DIGITAL TWIN</div><h1>Classroom A302<span class="cl-dot">.</span></h1><p>Môi trường học tập · 4 dải sáng chạy ngang lớp · Thông gió</p></div>
+    <div class="cl-connection"><span class="cl-status-dot"></span><span data-value="connection">Chưa kết nối</span><small data-value="updated">Chờ dữ liệu ESP32</small></div>
+  </header>
+  <div class="cl-metrics">
+    <article><span>NHIỆT ĐỘ</span><strong><b data-value="temperature">—</b><small> °C</small></strong><em>DHT22 · GPIO15</em></article>
+    <article><span>ĐỘ ẨM</span><strong><b data-value="humidity">—</b><small> %</small></strong><em>Môi trường lớp học</em></article>
+    <article><span>NGƯỜI TRONG PHÒNG</span><strong><b data-value="occupancy">—</b><small> người</small></strong><em data-value="occupancy_note">Hai tia A/B · chờ dữ liệu</em></article>
+    <article><span>SỨC KHỎE TWIN</span><strong><b data-value="health_score">—</b><small> /100</small></strong><em data-value="observed_state">Chờ dữ liệu</em></article>
+  </div>
+  <div class="cl-people-panel">
+    <div class="cl-people-summary"><span class="cl-people-title">Số người hiện trong lớp học</span><span class="cl-people-count"><b data-value="occupancy">—</b> người</span></div>
+    <div class="cl-gates"><span data-gate="a">A · <b data-value="ir_a">—</b></span><span data-gate="b">B · <b data-value="ir_b">—</b></span><small data-value="counter_state">Chờ hai tia</small></div>
+    <button class="cl-counter-reset" data-counter="reset" title="Chỉ xác nhận khi phòng thực sự không còn ai">Xác nhận phòng trống</button>
+    <p class="cl-counter-note" data-value="counter_note">Wokwi: giữ A → giữ B → nhả A → nhả B để vào; đảo thứ tự để ra.</p>
+  </div>
+  <div class="cl-workspace">
+  <div class="cl-scene-wrap">
+    <div class="cl-scene">
+      <img class="cl-base" alt="Lớp học A302 nhìn chéo từ góc trên cao, bỏ tường bên phải và viền tường thấp" src="__CLASSROOM_IMAGE__">
+      <img class="cl-lit-scene" aria-hidden="true" src="__CLASSROOM_IMAGE__">
+      <div class="cl-room-badge">A302 <span>4 dải ngang · từ tường trái sang tường phải</span></div>
+      <button class="cl-pin cl-pin-1" data-light="1" title="Dải sáng 1"><span>1</span><small>Dải 1</small></button>
+      <button class="cl-pin cl-pin-2" data-light="2" title="Dải sáng 2"><span>2</span><small>Dải 2</small></button>
+      <button class="cl-pin cl-pin-3" data-light="3" title="Dải sáng 3"><span>3</span><small>Dải 3</small></button>
+      <button class="cl-pin cl-pin-4" data-light="4" title="Dải sáng 4"><span>4</span><small>Dải 4</small></button>
+      <div class="cl-fan-marker" title="Quạt thông gió">
+        <svg class="cl-fan-svg" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 30C12 23 8 5 23 5c12 0 15 15 9 25M34 32c14-16 32-9 24 4-6 10-20 9-24-4M31 34c6 20-9 31-16 18-6-11 2-22 16-18" fill="currentColor"/><circle cx="32" cy="32" r="5" fill="#fff"/></svg>
+        <span data-value="fan_badge">Quạt —</span>
+      </div>
+    </div>
+    <div class="cl-scene-bottom"><span class="cl-observed">ÁNH SÁNG THEO PHẢN HỒI ESP32</span><span><b data-value="lights_on_count">0</b>/4 dải sáng</span></div>
+  </div>
+  <div class="cl-controls">
+    <div class="cl-controls-heading"><h2>Điều khiển chiếu sáng</h2><span>Đèn 1 sáng cả bảng · 4 dải ngang phủ kín lớp khi bật hết</span></div>
+    <div class="cl-lights">
+      <button class="cl-light-control" data-light="1"><span class="cl-light-icon">01</span><span class="cl-light-name">Dải 1 · gần bảng<small>Đèn 1 · GPIO16</small></span><span class="cl-switch" aria-hidden="true"></span></button>
+      <button class="cl-light-control" data-light="2"><span class="cl-light-icon">02</span><span class="cl-light-name">Dải 2 · nửa trước<small>Đèn 2 · GPIO17</small></span><span class="cl-switch" aria-hidden="true"></span></button>
+      <button class="cl-light-control" data-light="3"><span class="cl-light-icon">03</span><span class="cl-light-name">Dải 3 · nửa sau<small>Đèn 3 · GPIO18</small></span><span class="cl-switch" aria-hidden="true"></span></button>
+      <button class="cl-light-control" data-light="4"><span class="cl-light-icon">04</span><span class="cl-light-name">Dải 4 · cuối lớp<small>Đèn 4 · GPIO19</small></span><span class="cl-switch" aria-hidden="true"></span></button>
+    </div>
+    <div class="cl-fan-control">
+      <div><h2>Thông gió lớp học</h2><p>AUTO bật khi còn người trong phòng, tắt sau 15 giây kể từ người cuối ra. Hai nút A/B mô phỏng chắn tia hồng ngoại.</p></div>
+      <div class="cl-fan-actions"><button data-mode="AUTO">Tự động theo số người</button><button data-mode="MANUAL">Thủ công</button><button class="cl-fan-toggle" data-fan="toggle">Quạt —</button></div>
+    </div>
+    <div class="cl-message" role="status" aria-live="polite">Chờ kết nối ESP32 để điều khiển.</div>
+  </div>
+  </div>
+</section>
+

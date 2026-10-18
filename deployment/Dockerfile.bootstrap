@@ -1,0 +1,8 @@
+FROM python:3.12-slim
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 TB_RUNTIME_DIR=/runtime TB_EXPORT_DIR=/runtime/exports
+WORKDIR /app
+COPY thingsboard/ /app/thingsboard/
+COPY assets/classroom-overview-v2.png /app/assets/classroom-overview-v2.png
+RUN chmod -R a+rX /app
+ENTRYPOINT ["python", "/app/thingsboard/setup.py"]
+

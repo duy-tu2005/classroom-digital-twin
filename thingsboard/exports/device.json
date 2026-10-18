@@ -1,0 +1,35 @@
+{
+  "id": {
+    "entityType": "DEVICE",
+    "id": "4c0b3dc0-c6c8-11f1-b568-efad131da3da"
+  },
+  "createdTime": 1791869899675,
+  "tenantId": {
+    "entityType": "TENANT",
+    "id": "4a5d3fa0-c6c8-11f1-b568-efad131da3da"
+  },
+  "customerId": {
+    "entityType": "CUSTOMER",
+    "id": "13814000-1dd2-11b2-8080-808080808080"
+  },
+  "name": "ESP32_Classroom_Node",
+  "type": "ESP32_Classroom_Profile",
+  "label": "ESP32 · DHT22 · hai tia IR · 4 đèn · quạt",
+  "deviceProfileId": {
+    "entityType": "DEVICE_PROFILE",
+    "id": "4bc9ef00-c6c8-11f1-b568-efad131da3da"
+  },
+  "firmwareId": null,
+  "softwareId": null,
+  "externalId": null,
+  "version": 15,
+  "additionalInfo": null,
+  "deviceData": {
+    "configuration": {
+      "type": "DEFAULT"
+    },
+    "transportConfiguration": {
+      "type": "DEFAULT"
+    }
+  }
+}

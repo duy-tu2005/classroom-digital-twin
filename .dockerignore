@@ -1,0 +1,13 @@
+.git
+**/.pio
+**/__pycache__
+**/secrets.h
+**/.env*
+**/*.pem
+deployment/runtime
+deployment/backups
+assets/references
+preview
+tools/.runtime
+tests/results
+

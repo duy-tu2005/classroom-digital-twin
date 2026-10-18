@@ -1,0 +1,21 @@
+{
+  "id": {
+    "entityType": "ASSET_PROFILE",
+    "id": "4bddc520-c6c8-11f1-b568-efad131da3da"
+  },
+  "createdTime": 1791869899378,
+  "tenantId": {
+    "entityType": "TENANT",
+    "id": "4a5d3fa0-c6c8-11f1-b568-efad131da3da"
+  },
+  "name": "Classroom_Profile",
+  "description": "Classroom Digital Twin root asset",
+  "image": null,
+  "defaultRuleChainId": null,
+  "defaultDashboardId": null,
+  "defaultQueueName": null,
+  "defaultEdgeRuleChainId": null,
+  "externalId": null,
+  "version": 15,
+  "default": false
+}

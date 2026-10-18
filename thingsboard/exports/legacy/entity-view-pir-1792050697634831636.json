@@ -1,0 +1,36 @@
+{
+  "entityId": {
+    "entityType": "DEVICE",
+    "id": "4c0b3dc0-c6c8-11f1-b568-efad131da3da"
+  },
+  "tenantId": {
+    "entityType": "TENANT",
+    "id": "4a5d3fa0-c6c8-11f1-b568-efad131da3da"
+  },
+  "customerId": {
+    "entityType": "CUSTOMER",
+    "id": "13814000-1dd2-11b2-8080-808080808080"
+  },
+  "name": "Classroom_PIR_View",
+  "type": "Classroom component",
+  "keys": {
+    "timeseries": [
+      "motion"
+    ],
+    "attributes": {
+      "cs": [],
+      "ss": [],
+      "sh": []
+    }
+  },
+  "startTimeMs": 0,
+  "endTimeMs": 0,
+  "externalId": null,
+  "version": 9,
+  "id": {
+    "entityType": "ENTITY_VIEW",
+    "id": "4cb364a0-c6c8-11f1-b568-efad131da3da"
+  },
+  "createdTime": 1791869900778,
+  "additionalInfo": null
+}

@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "author": "Classroom Digital Twin",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp32", "top": 110, "left": 160, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": -18.9,
+      "left": 349.8,
+      "attrs": { "temperature": "26", "humidity": "60" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "gateA",
+      "top": -30,
+      "left": -30,
+      "attrs": { "color": "blue", "label": "TIA A - NGOAI CUA (giu A)", "key": "A", "bounce": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "gateB",
+      "top": -30,
+      "left": 130,
+      "attrs": { "color": "green", "label": "TIA B - TRONG CUA (giu B)", "key": "B", "bounce": "1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "light1",
+      "top": 430,
+      "left": -25,
+      "attrs": { "color": "yellow", "label": "DEN 1 - GPIO16 / RX2" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "light2",
+      "top": 380.4,
+      "left": 99.8,
+      "attrs": { "color": "yellow", "label": "DEN 2 - GPIO17 / TX2" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "light3",
+      "top": 430,
+      "left": 245,
+      "attrs": { "color": "yellow", "label": "DEN 3 - GPIO18" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "light4",
+      "top": 430,
+      "left": 380,
+      "attrs": { "color": "yellow", "label": "DEN 4 - GPIO19" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 360,
+      "left": -16,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 388.8,
+      "left": 191.45,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 388.8,
+      "left": 297.05,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": 388.8,
+      "left": 412.25,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "fanIndicator",
+      "top": 418.8,
+      "left": 503,
+      "attrs": { "color": "blue", "label": "QUAT ON - GPIO23" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rFan",
+      "top": 360,
+      "left": 539,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp32:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp32:RX0", "$serialMonitor:TX", "", [] ],
+    [ "dht:VCC", "esp32:3V3", "red", [ "v30", "h-0.2", "v233.6" ] ],
+    [ "dht:GND", "esp32:GND.1", "black", [ "v45", "h-0.2", "v209.1" ] ],
+    [ "dht:SDA", "esp32:D15", "green", [ "v60", "h-0.1", "v184.6" ] ],
+    [ "gateA:1.r", "esp32:D13", "violet", [ "h25", "v140" ] ],
+    [ "gateA:2.l", "esp32:GND.2", "black", [ "h-25", "v200" ] ],
+    [ "gateB:1.r", "esp32:D27", "cyan", [ "h20", "v110" ] ],
+    [ "gateB:2.l", "esp32:GND.2", "black", [ "h-15", "v175" ] ],
+    [ "esp32:RX2", "r1:1", "orange", [ "h35", "v110", "*", "v-15" ] ],
+    [ "r1:2", "light1:A", "orange", [ "v15" ] ],
+    [ "esp32:TX2", "r2:1", "gold", [ "h50", "v125", "*", "v-15" ] ],
+    [ "r2:2", "light2:A", "gold", [ "v15" ] ],
+    [ "esp32:D18", "r3:1", "green", [ "h65", "v150", "*", "v-15" ] ],
+    [ "r3:2", "light3:A", "green", [ "v15" ] ],
+    [ "esp32:D19", "r4:1", "cyan", [ "h80", "v165", "*", "v-15" ] ],
+    [ "r4:2", "light4:A", "cyan", [ "v15" ] ],
+    [ "esp32:D23", "rFan:1", "blue", [ "h95", "v210", "*", "v-15" ] ],
+    [ "rFan:2", "fanIndicator:A", "blue", [ "v15" ] ],
+    [ "light1:C", "light2:C", "black", [ "v36.8", "h124.8" ] ],
+    [ "light2:C", "light3:C", "black", [ "v35", "*", "v35" ] ],
+    [ "light3:C", "light4:C", "black", [ "v35", "*", "v35" ] ],
+    [ "light4:C", "fanIndicator:C", "black", [ "v35", "*", "v35" ] ],
+    [ "light1:C", "esp32:GND.2", "black", [ "v35", "h-55", "v-245", "*", "h-45" ] ]
+  ],
+  "serialMonitor": { "display": "always", "newline": "lf" },
+  "dependencies": {}
+}

@@ -1,0 +1,25 @@
+{
+  "id": {
+    "entityType": "ASSET",
+    "id": "4bf6f270-c6c8-11f1-b568-efad131da3da"
+  },
+  "createdTime": 1791869899543,
+  "tenantId": {
+    "entityType": "TENANT",
+    "id": "4a5d3fa0-c6c8-11f1-b568-efad131da3da"
+  },
+  "customerId": {
+    "entityType": "CUSTOMER",
+    "id": "13814000-1dd2-11b2-8080-808080808080"
+  },
+  "name": "Classroom_A302",
+  "type": "Classroom_Profile",
+  "label": "Classroom A302",
+  "assetProfileId": {
+    "entityType": "ASSET_PROFILE",
+    "id": "4bddc520-c6c8-11f1-b568-efad131da3da"
+  },
+  "externalId": null,
+  "version": 16,
+  "additionalInfo": null
+}

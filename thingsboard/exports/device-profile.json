@@ -1,0 +1,43 @@
+{
+  "id": {
+    "entityType": "DEVICE_PROFILE",
+    "id": "4bc9ef00-c6c8-11f1-b568-efad131da3da"
+  },
+  "createdTime": 1791869899248,
+  "tenantId": {
+    "entityType": "TENANT",
+    "id": "4a5d3fa0-c6c8-11f1-b568-efad131da3da"
+  },
+  "name": "ESP32_Classroom_Profile",
+  "description": "DHT22 + two IR break-beam gates + 4 lights + fan output",
+  "image": null,
+  "type": "DEFAULT",
+  "transportType": "DEFAULT",
+  "provisionType": "DISABLED",
+  "defaultRuleChainId": {
+    "entityType": "RULE_CHAIN",
+    "id": "4b60a5e0-c6c8-11f1-b568-efad131da3da"
+  },
+  "defaultDashboardId": null,
+  "defaultQueueName": null,
+  "provisionDeviceKey": null,
+  "firmwareId": null,
+  "softwareId": null,
+  "defaultEdgeRuleChainId": null,
+  "externalId": null,
+  "version": 15,
+  "default": false,
+  "profileData": {
+    "configuration": {
+      "type": "DEFAULT"
+    },
+    "transportConfiguration": {
+      "type": "DEFAULT"
+    },
+    "provisionConfiguration": {
+      "type": "DISABLED",
+      "provisionDeviceSecret": null
+    },
+    "alarms": null
+  }
+}
