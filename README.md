@@ -1,7 +1,6 @@
 # Classroom Digital Twin — A302
 
-Dự án riêng cho lớp học, không thay thế dự án kho trước đó. ESP32/Wokwi đọc
-DHT22 và **hai tia hồng ngoại A/B đếm người vào–ra**, điều khiển **4 đèn độc lập và 1 đầu ra quạt**. ThingsBoard trên
+ESP32/Wokwi đọc DHT22 và **hai tia hồng ngoại A/B đếm người vào–ra**, điều khiển **4 đèn độc lập và 1 đầu ra quạt**. ThingsBoard trên
 AWS lưu dữ liệu, tính sức khỏe lớp học, tạo cảnh báo và gửi lệnh hai chiều.
 
 ## Lấy mã nguồn từ GitHub
